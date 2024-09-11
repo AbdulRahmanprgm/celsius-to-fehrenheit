@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>celsius to fahremheit</title>
+</head>
+<body>
+    <div class="container">
+        <h5>CELSIUS TO FAHRENHEIT CONVERTER</h5>
+        <div>
+            <input type="text" id="input" placeholder="celsius"  class="in"> 
+        </div>
+        <div>
+        <button type="submit" onclick="celsiusto()" class="btn">CONVERT</button>
+        </div>
+        <div id="result" class="result">
+        </div>
+    </div>
+    <script>
+        function celsiusto(){
+        let celval=Number(document.getElementById("input").value)
+        let fahval= (celval*9/5) + 32
+        let result=document.getElementById("result")
+        result.innerHTML = fahval.toFixed(1) + "&#8457"
+        }
+    </script>
+</body>
+</html>
